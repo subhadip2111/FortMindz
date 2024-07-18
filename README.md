@@ -21,7 +21,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Registers a new user.
   - Example Request:
     ```bash
-    curl -X POST https://api.whatsnext.com/api/auth/register \
+    curl -X POST https://localhost:3000/auth/register \
       -H "Content-Type: application/json" \
       -d '{"username": "exampleuser", "password": "examplepassword"}'
     ```
@@ -37,7 +37,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Logs in a user and returns a JWT token.
   - Example Request:
     ```bash
-    curl -X POST https://api.whatsnext.com/api/auth/login \
+    curl -X POST https://localhost:3000/auth/login \
       -H "Content-Type: application/json" \
       -d '{"username": "exampleuser", "password": "examplepassword"}'
     ```
@@ -55,7 +55,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Retrieves a list of all beauticians.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/beauticians
+    curl -X GET https://localhost:3000/beauticians
     ```
   - Example Response:
     ```json
@@ -76,7 +76,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Retrieves details of a specific beautician by ID.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/beauticians/60f6b5d5759c1a3b2c2b9f11
+    curl -X GET https://localhost:3000/beauticians/60f6b5d5759c1a3b2c2b9f11
     ```
   - Example Response:
     ```json
@@ -97,7 +97,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Requires authentication.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/saloons \
+    curl -X GET https://localhost:3000/saloons \
       -H "Authorization: Bearer <your_token>"
     ```
   - Example Response:
@@ -124,7 +124,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Requires authentication.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/saloons/60f6b5d5759c1a3b2c2b9f21 \
+    curl -X GET https://localhost:3000/saloons/60f6b5d5759c1a3b2c2b9f21 \
       -H "Authorization: Bearer <your_token>"
     ```
   - Example Response:
@@ -159,7 +159,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Requires authentication.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/services \
+    curl -X GET https://localhost:3000/services \
       -H "Authorization: Bearer <your_token>"
     ```
   - Example Response:
@@ -187,7 +187,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Retrieves services offered by a specific beautician.
   - Example Request:
     ```bash
-    curl -X GET https://api.whatsnext.com/api/services/beautician/60f6b5d5759c1a3b2c2b9f11 \
+    curl -X GET https://localhost:3000/services/beautician/60f6b5d5759c1a3b2c2b9f11 \
       -H "Authorization: Bearer <your_token>"
     ```
   - Example Response:
@@ -214,7 +214,7 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
   - Requires authentication.
   - Example Request:
     ```bash
-    curl -X POST https://api.whatsnext.com/api/appointments/book \
+    curl -X POST https://localhost:3000/appointments/book \
       -H "Authorization: Bearer <your_token>" \
       -H "Content-Type: application/json" \
       -d '{"beautician": "60f6b5d5759c1a3b2c2b9f11", "service": "60f6b5d5759c1a3b2c2b9f31", "saloon": "60f6b5d5759c1a3b2c2b9f21", "appointmentDate": "2024-08-01T10:00:00Z", "status": "pending"}'
