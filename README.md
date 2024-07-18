@@ -2,7 +2,26 @@
 
 Welcome to the API documentation for the **Salon Booking** project. This document provides details about the endpoints available, their functionalities, and examples of usage.
 
+## Table of Contents
 
+- [Introduction](#introduction)
+- [Base URL](#base-url)
+- [Authentication](#authentication)
+- [Endpoints](#endpoints)
+  - [Authentication](#authentication)
+  - [Beautician Endpoints](#beautician-endpoints)
+  - [Saloon Endpoints](#saloon-endpoints)
+  - [Service Endpoints](#service-endpoints)
+  - [Appointments Endpoint](#appointments-endpoint)
+  - [Error Handling](#error-handling)
+- [Setup and Installation](#setup-and-installation)
+- [Clone the Repository](#clone-the-repository)
+- [API Usage](#api-usage)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+This API documentation outlines the endpoints available in the **Salon Booking** project. It covers user authentication, beautician management, saloon details, service offerings, booking appointments, and error handling.
 
 ## Base URL
 
@@ -239,6 +258,34 @@ Most endpoints require authentication using JWT (JSON Web Token). Include the JW
     }
     ```
 
-## Conclusion
+## Setup and Installation
 
-This concludes the API documentation for the **Salon Booking** project. Use the provided examples to interact with the API endpoints effectively. If you have any questions or need further assistance, please refer to the documentation or contact our support team.
+To run the **Salon Booking** project locally, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/subhadip2111/FortMindz.git
+# Install Dependencies:
+
+bash
+Copy code
+cd FortMindz
+npm install
+Set Environment Variables:
+
+ # Create a .env file in the root directory with the following variables:
+
+dotenv
+Copy code
+PORT=<Your port>
+MONGODB_URI=<your_mongodb_uri>
+JWT_SECRET=<your_jwt_secret>
+Run the Server:
+
+# bash
+
+npm run start
+Access the API:
+
+The API will be accessible at http://localhost:3000.
